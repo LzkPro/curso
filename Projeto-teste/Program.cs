@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_teste.Entities;
+using System;
 
 namespace Projeto_teste
 {
@@ -6,10 +7,10 @@ namespace Projeto_teste
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("How are you today");
-            Console.ReadLine();
-          
+            Worker work = new Worker();
+            work.Departments.Name = "Luiz";
+            Console.WriteLine(work.Departments.Name);
+         
         }
     }
 }
