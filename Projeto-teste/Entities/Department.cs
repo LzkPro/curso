@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Projeto_teste.Entities
 {
-    class Departments
+    class Department
     {
         public string Name { get; set; }
 
-        public Departments()
+        public Department()
         {
         }
-        public Departments(string name)
+        public Department(string name)
         {
             Name = name;
         }
