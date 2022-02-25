@@ -1,5 +1,6 @@
 ﻿using Projeto_teste.Entities.Enums;
 using System.Collections.Generic;
+using System.Globalization;
 namespace Projeto_teste.Entities
 
 {
@@ -33,8 +34,15 @@ namespace Projeto_teste.Entities
         
         public double Income(int year, int month)
         {
-
-            return 1;
+            double sum = BaseSalary;
+            foreach(HourContract contract in Contracts)
+            {
+                if(contract.Date.Year == year && contract.Date.Month == month)
+                {
+                    sum += contract.TotalValue();
+                }
+            }
+            return sum;
         }
 
     }
